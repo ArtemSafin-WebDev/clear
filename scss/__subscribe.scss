@@ -1,0 +1,31 @@
+.subscribe {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: #505258;
+
+  @media (max-width:1200px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .split {
+    display: block;
+    width: 1px;
+    background: rgb(115, 117, 123);
+    height: 111px;
+    @media (max-width:1200px){
+      display: none;
+    }
+  }
+  .btn-gray {
+    min-width: 297px;
+    padding: 27px 39px;
+    margin-bottom: 30px;
+    @media(max-width: 1199px){
+      min-width: 290px;
+      padding: 27px 34px;
+    }
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}

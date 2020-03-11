@@ -1,0 +1,129 @@
+button {
+  outline: none !important;
+}
+
+.btn-brown {
+  padding: 12px 23px 11px;
+  background-color: rgb(187, 162, 148);
+  font-size: 12px;
+  font-family: "Proxima Nova Lt";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 1.667;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all .2s;
+  &:hover {
+    background-color: rgb(120, 121, 124);
+  }
+  @media(max-width:1199px){
+    padding: 12px 21px 11px;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+}
+
+.btn-white {
+  padding: 12px 23px 11px;
+  background-color: white;
+  font-size: 12px;
+  font-family: "Proxima Nova rg";
+  color: rgb(187, 162, 148);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 1.667;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all .2s;
+  &:hover {
+    background-color: rgb(120, 121, 124);
+    color: white;
+  }
+}
+
+.btn-gray {
+  border: 1px solid rgb(115, 117, 123);
+  background-color: transparent;
+  padding: 29px 39px;
+  font-size: 14px;
+  font-family: "Proxima Nova Lt";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2.6px;
+  transition: all .4s;
+  overflow: hidden;
+  position: relative;
+  span{
+    position: relative;
+    z-index: 2;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background: rgb(120, 121, 124);
+    transition: all .4s;
+    z-index: 1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+  }
+  &:hover {
+    //border-color: transparent;
+    color: white;
+    &:before{
+      left: 0;
+    }
+  }
+
+}
+
+.btn-white-outline {
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 29px 39px;
+  font-size: 14px;
+  font-family: "Proxima Nova Lt";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2.6px;
+  transition: all .2s;
+  &:hover {
+    border-color: $brown;
+    background: $brown;
+    color: white;
+  }
+
+}
+
+.btn-black {
+  padding: 20px 23px 18px;
+  background-color: rgb(61, 62, 65);
+  font-size: 13px;
+  font-family: "Proxima Nova Lt";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 1.667;
+  cursor: pointer;
+  transition: all .2s;
+  letter-spacing: 2.4px;
+  &:hover {
+    background-color: $brown;
+    color: white;
+  }
+}

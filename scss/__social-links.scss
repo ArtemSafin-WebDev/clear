@@ -1,0 +1,36 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  a {
+    display: block;
+    margin-right: 16px;
+    font-size: 0.8em;
+
+    i{
+      color: #bba294;
+    }
+    &:hover {
+      i{
+        color: #78797c;
+      }
+      text-decoration: none;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &.--white{
+    a{
+      i{
+        color: white;
+      }
+      &:hover{
+        i{
+          color: #bba294;
+
+        }
+      }
+    }
+  }
+}

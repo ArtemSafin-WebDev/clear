@@ -1,0 +1,186 @@
+.footer {
+  background: #78797c;
+  color: white;
+  .info-row {
+    padding-top: 67px;
+    padding-bottom: 62px;
+    @media(max-width: 1199px){
+      padding-top: 30px;
+      padding-bottom: 0;
+      .img-fluid{
+        width: 27.6%;
+        height: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .sub-row {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    @media(max-width: 1199px){
+      margin-left: 0;
+      margin-right: 0;
+      .mobile-split{
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .link-w-icon {
+    font-family: "Proxima Nova Rg";
+    padding-left: 21px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.833;
+    letter-spacing: 1px;
+    @media(max-width: 1199px){
+      margin-bottom: 22px;
+      display: block;
+      letter-spacing: 1.3px;
+      padding-left: 30px;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #bba294;
+    }
+    &.geo {
+      position: relative;
+      &:before {
+        content: url("../assets/geo-icon-w.png");
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+      }
+    }
+    &.phone {
+      position: relative;
+      @media(max-width: 1199px){
+        font-size: 13.6px;
+      }
+      &:before {
+        content: url("../assets/phone-icon-w.png");
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+      }
+    }
+
+  }
+  .logo-block{
+    text-align: center;
+    order: 1;
+    @media (max-width: 1199px) {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      order: 0;
+    }
+  }
+  &__link {
+    font-size: 12px;
+    font-family: "Proxima Nova Rg";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 36px;
+    display: block;
+    letter-spacing: 2px;
+    @media(max-width: 1199px){
+      font-size: 10.5px;
+      padding-left: 3px;
+      margin-bottom: 24px;
+      line-height: 1.15;
+    }
+    &:hover {
+      color: #bba294;
+      text-decoration: none;
+    }
+  }
+
+  .social-links {
+    justify-content: space-around;
+    margin-bottom: 35px;
+    @media(max-width: 1199px){
+      margin-bottom: 0;
+    }
+    a {
+      margin-right: 0;
+
+      @media(max-width: 1199px){
+        margin-right:  19px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+    i {
+      font-size: 19px;
+    }
+  }
+
+  .big-text {
+    font-size: 14px;
+    font-family: "Helvetica Neue1";
+    color: rgb(181, 181, 181);
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 300;
+    @media(max-width:1199px){
+      font-size: 16px;
+      letter-spacing: 1.2px;
+
+      //font-size: 15px;
+      //letter-spacing: 1.7px;
+    }
+    &:first-of-type{
+
+    }
+  }
+
+  a.big-text {
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      background: rgb(181, 181, 181);
+    }
+    &:hover {
+      color: #bba294;
+      text-decoration: none;
+      &:after{
+        background: #bba294;
+
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 10px;
+    font-family: "Proxima Nova Rg";
+    color: rgb(200, 200, 200);
+    line-height: 1.2;
+    @media (max-width:1199px) {
+      line-height: 1.6;
+      display: inherit;
+    }
+    img{
+      height: 20px;
+      width: 67px;
+    }
+  }
+}

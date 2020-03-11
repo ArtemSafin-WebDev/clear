@@ -1,0 +1,142 @@
+.input-block{
+  position: relative;
+  .error-msg{
+    display: none;
+    height: 0;
+    transition: all .2s;
+  }
+
+
+
+  input{
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    padding-left: 24px;
+    border: 0;
+    background-color: rgb(243, 243, 243);
+    height: 44px;
+    font-family: "Proxima Nova Lt";
+    color: rgb(80, 82, 88);
+    line-height: 1.75;
+    &.error{
+      border: 1px solid red;
+      + .error-msg{
+        display: block;
+        color: red;
+        font-size: 10px;
+        font-family: "Proxima Nova Lt";
+        line-height: 1.6;
+        width: 100%;
+        height: auto;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.custom-checkbox{
+  input{
+    display: none;
+    &:checked + label{
+      &:after{
+        opacity: 1;
+      }
+    }
+  }
+  label{
+    cursor: pointer;
+    padding-left: 27px;
+    position: relative;
+    font-size: 12px;
+    font-family: "Proxima Nova Rg";
+    color: rgb(80, 82, 88);
+    line-height: 1.5;
+    margin-bottom: 0;
+    &:before{
+      border: 1px solid rgb(187, 162, 148);
+      width: 16px;
+      height: 16px;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &:after{
+      opacity: 0;
+      content: '';
+      position: absolute;
+      background: url("../assets/tick.png");
+      width: 10px;
+      height: 8px;
+      left: 3px;
+      top: 4px;
+
+    }
+  }
+}
+
+.select2{
+  width: 100% !important;
+  font-family: "Proxima Nova Lt";
+  color: rgb(80, 82, 88);
+  outline: none !important;
+}
+.select2-container--default .select2-selection--single{
+  border-radius: 0;
+  border: 0;
+  background-color: rgb(243, 243, 243);
+  height: 44px;
+}
+
+.select2-results__option{
+  height: 44px;
+  font-family: "Proxima Nova Lt";
+  line-height: 2;
+  color: rgb(80, 82, 88);
+  padding-left: 24px;
+  background-color: rgb(243, 243, 243);
+}
+
+.select2-container--default .select2-results__option[aria-selected=true]{
+  background: white;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+  background: rgb(191, 167, 153);
+  color: white;
+}
+.select2-dropdown {
+  border: 0;
+  border-radius: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  line-height: 2.8;
+  padding-left: 24px;
+}
+.select2-search--dropdown{
+  display: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 44px;
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  width: 20px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  margin-top: -7px;
+  border: 0;
+  border-left: 2px solid rgb(191, 167, 153);
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgb(191, 167, 153);
+  transform: rotate(225deg);
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+  border: 0;
+  border-left: 2px solid rgb(191, 167, 153);
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgb(191, 167, 153); transform: rotate(45deg);
+}

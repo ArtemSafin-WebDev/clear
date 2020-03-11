@@ -1,0 +1,43 @@
+body {
+  position: relative;
+  padding-top: 128px;
+  font-family: "Proxima Nova Rg", sans-serif;
+  @media (max-width: 1199px) {
+    padding-top: 45px;
+  }
+}
+
+.hello-world {
+  color: red;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 18px;
+    font-family: "Proxima Nova Rg";
+    color: #414349;
+    line-height: 1.556;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 12px;
+        width: 3px;
+        height: 3px;
+        background: #bba294;
+    }
+  }
+}
+
+
+.ya-share2__item {
+  padding: 0;
+  &::before {
+    display: none;
+  }
+}

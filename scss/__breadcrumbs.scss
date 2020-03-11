@@ -1,0 +1,39 @@
+.breadcrumbs{
+  margin-bottom: 57px;
+  &__item{
+    font-size: 10px;
+    font-family: "Proxima Nova Lt";
+    color: rgb(65, 67, 73);
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-right: 26px;
+    position: relative;
+    letter-spacing: 0.6px;
+    z-index: 5;
+    &:after{
+      content: '';
+      height: 5px;
+      width: 5px;
+      position: absolute;
+      right: -16px;
+      top: -1px;
+      bottom: 0;
+      margin: auto;
+      border-top: 1px solid $brown;
+      border-right: 1px solid $brown;
+      transform: rotate(45deg);
+    }
+    &:last-of-type{
+      font-weight: 600;
+      pointer-events: none;
+      text-decoration: none;
+      letter-spacing: 1px;
+      &:after{
+        display: none;
+      }
+    }
+    &:hover{
+      color: $brown;
+    }
+  }
+}

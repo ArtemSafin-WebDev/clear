@@ -1,0 +1,98 @@
+.blog{
+
+  &__tile {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 20px;
+      @media (min-width: $xxl-width) {
+        padding-left: 34px;
+        padding-right: 34px;
+        padding-bottom: 30px;
+      }
+      &:before {
+        opacity: 1;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        transition: all .2s;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(120, 121, 124) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(120, 121, 124) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255,  0) 0%, rgb(120, 121, 124) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0); /* IE6-9 */
+      }
+      &:after {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        z-index: 0;
+        transition: all .2s;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(187, 162, 148) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(187, 162, 148) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(187, 162, 148) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      .sub-info {
+        position: relative;
+        font-size: 10px;
+        font-family: "Proxima Nova Rg";
+        color: rgb(222, 201, 182);
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        z-index: 1;
+        @media(min-width: $xxl-width){
+
+          font-size: 11px;
+          letter-spacing: 2px;
+        }
+        span {
+          margin-right: 16px;
+        }
+      }
+      .title {
+        position: relative;
+        font-size: 23px;
+        font-family: "Proxima Nova Lt";
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        min-height: 54px;
+        letter-spacing: 0.7px;
+        z-index: 1;
+      }
+    }
+    &:hover{
+      &:hover {
+        .content:before {
+          opacity: 0;
+          bottom: -5%;
+        }
+        .content:after {
+          opacity: 1;
+          bottom: 0;
+        }
+
+        text-decoration: none;
+      }
+    }
+  }
+}

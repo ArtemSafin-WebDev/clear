@@ -1,0 +1,66 @@
+
+
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  @media(min-width: 1200px) {
+    padding-top: 79px;
+    padding-bottom: 114px;
+  }
+}
+
+.page-title {
+  font-size: 48px;
+  font-family: "Helvetica Neue1";
+  color: rgb(65, 67, 73);
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 5.4px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  @media(max-width: 1199px) {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+  @media(min-width: 1200px) {
+    margin-bottom: 81px;
+
+  }
+}
+
+.load-more {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+
+  &__splitter {
+    border-top: 2px solid $brown;
+    flex: 1;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 2px solid rgb(187, 162, 148);
+    background-color: rgba(187, 162, 148, 0);
+    font-size: 12px;
+    font-family: "Proxima Nova Rg";
+    color: rgb(187, 162, 148);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .2s;
+    letter-spacing: 3px;
+    padding: 13px 20px 11px 20px;
+    i {
+      font-size: 20px;
+      margin-right: 16px;
+    }
+    &:hover {
+      background-color: rgba(187, 162, 148, 1);
+      color: white;
+    }
+  }
+}
