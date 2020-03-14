@@ -67,9 +67,20 @@ header {
         text-transform: uppercase;
         line-height: 1.667;
 
-        &:nth-child(1),
+        // &:nth-child(1),
+        // &:nth-child(2) {
+        //   @media (max-width: 1680px) {
+        //     display: none;
+        //   }
+        // }
+
+        &:nth-child(1) {
+          @media (max-width: 1679px) {
+            display: none;
+          }
+        }
         &:nth-child(2) {
-          @media (max-width: 1680px) {
+          @media (max-width: 1199px) {
             display: none;
           }
         }
@@ -210,7 +221,6 @@ header {
       &.big-menu {
         padding-top: 65px;
         padding-bottom: 70px;
-        
       }
 
       &.small-menu {
@@ -239,12 +249,21 @@ header {
       .menu-item {
         width: 25%;
         padding: 10px;
-        &--hidden {
+        &--hidden-1 {
           display: none;
-          @media (max-width: 1680px) {
+          @media (max-width: 1679px) {
             display: block;
           }
         }
+        &--hidden-2 {
+          display: none;
+          @media (max-width: 1199px) {
+            display: block;
+          }
+        }
+
+
+        
 
         .title {
           font-size: 12px;
@@ -344,7 +363,7 @@ header {
         &--bold {
           font-family: "Proxima Nova Rg", sans-serif;
           font-weight: 700;
-        } 
+        }
         &:hover {
           text-decoration: none;
           color: $brown;
