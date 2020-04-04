@@ -5,7 +5,8 @@ $mainDSlider.owlCarousel({
   dots: false,
   mouseDrag: true,
   touchDrag: true,
-  loop: true
+  loop: false,
+  rewind: true
 });
 $mainDSlider
   .parent()
@@ -57,7 +58,8 @@ var $mainMobileSlider = $(".main-slider.mobile .owl-carousel");
 $mainMobileSlider.owlCarousel({
   items: 1,
   dots: true,
-  loop: true,
+  loop: false,
+  rewind: true,
   dotsEach: 1,
   slideBy: 1,
   dotsContainer: $(".main-slider.mobile .slider__nav__container")
@@ -198,11 +200,11 @@ if (!$("body").hasClass("is-admin")) {
     dots: true,
     margin: 60,
     items: 8,
-    loop: true,
+    loop: false,
     dotsEach: 3,
     slideBy: 3,
     dotsContainer: $('[s-control="partners"] .slider__nav__container'),
-
+    rewind: true,
     responsive: {
       0: {
         items: 3,
