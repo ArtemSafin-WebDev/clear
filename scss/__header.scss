@@ -234,6 +234,15 @@ header {
       &.small-menu {
         padding-top: 28px;
         padding-bottom: 24px;
+        padding-left: 155px;
+        @media screen and (max-width: 1199px) {
+          padding-left: 75px;
+          
+        }
+        @media screen and (max-width: 991px) {
+          padding-left: 0;
+          
+        }
       }
 
       a {
