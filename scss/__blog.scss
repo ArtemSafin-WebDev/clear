@@ -5,6 +5,10 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 40px;
+
+    .sub-info span {
+      transition: color .2s;
+    }
     img {
       width: 100%;
       max-width: 100%;
@@ -89,6 +93,10 @@
         .content:after {
           opacity: 1;
           bottom: 0;
+        }
+
+        .sub-info span {
+          color: white;
         }
 
         text-decoration: none;

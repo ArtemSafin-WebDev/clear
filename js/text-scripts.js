@@ -7,19 +7,19 @@ $prepareSlider.owlCarousel({
     0: {
       items: 1,
       slideBy: 1,
-      dotsEach: 1
+      dotsEach: 1,
     },
     1200: {
       items: 4,
       slideBy: 4,
-      dotsEach: 4
-    }
-  }
+      dotsEach: 4,
+    },
+  },
 });
-$('[s-control="prepare"] .prev').on("click", function() {
+$('[s-control="prepare"] .prev').on("click", function () {
   $prepareSlider.trigger("prev.owl.carousel");
 });
-$('[s-control="prepare"] .next').on("click", function() {
+$('[s-control="prepare"] .next').on("click", function () {
   $prepareSlider.trigger("next.owl.carousel");
 });
 
@@ -33,19 +33,19 @@ $fbSlider.owlCarousel({
     0: {
       items: 1,
       slideBy: 1,
-      dotsEach: 1
+      dotsEach: 1,
     },
     1200: {
       items: 4,
       slideBy: 4,
-      dotsEach: 4
-    }
-  }
+      dotsEach: 4,
+    },
+  },
 });
-$('[s-control="feedback"] .prev').on("click", function() {
+$('[s-control="feedback"] .prev').on("click", function () {
   $fbSlider.trigger("prev.owl.carousel");
 });
-$('[s-control="feedback"] .next').on("click", function() {
+$('[s-control="feedback"] .next').on("click", function () {
   $fbSlider.trigger("next.owl.carousel");
 });
 
@@ -61,18 +61,18 @@ $partnerSlider.owlCarousel({
   responsive: {
     0: {
       items: 3,
-      margin: 30
+      margin: 30,
     },
     1200: {
-      items: 8
-    }
-  }
+      items: 8,
+    },
+  },
 });
 
-$('[s-control="partners"] .prev').on("click", function() {
+$('[s-control="partners"] .prev').on("click", function () {
   $partnerSlider.trigger("prev.owl.carousel");
 });
-$('[s-control="partners"] .next').on("click", function() {
+$('[s-control="partners"] .next').on("click", function () {
   $partnerSlider.trigger("next.owl.carousel");
 });
 
@@ -88,17 +88,17 @@ $medicsSlider.owlCarousel({
   responsive: {
     0: {
       items: 1,
-      margin: 30
+      margin: 30,
     },
     1200: {
-      items: 4
-    }
-  }
+      items: 4,
+    },
+  },
 });
-$('[s-control="medics"] .prev').on("click", function() {
+$('[s-control="medics"] .prev').on("click", function () {
   $medicsSlider.trigger("prev.owl.carousel");
 });
-$('[s-control="medics"] .next').on("click", function() {
+$('[s-control="medics"] .next').on("click", function () {
   $medicsSlider.trigger("next.owl.carousel");
 });
 
@@ -106,7 +106,7 @@ var eduSections = Array.prototype.slice.call(
   document.querySelectorAll(".education")
 );
 
-eduSections.forEach(function(element) {
+eduSections.forEach(function (element) {
   var carouselElement = $(element.querySelector(".owl-carousel"));
   var nextBtn = element.querySelector('[s-control="edu"] .next');
   var prevBtn = element.querySelector('[s-control="edu"] .prev');
@@ -123,37 +123,49 @@ eduSections.forEach(function(element) {
     responsive: {
       0: {
         items: 1,
-        margin: 30
+        margin: 30,
       },
       1200: {
-        items: 4
-      }
-    }
+        items: 4,
+      },
+    },
   });
 
-  prevBtn.addEventListener("click", function() {
+  prevBtn.addEventListener("click", function () {
     carouselElement.trigger("prev.owl.carousel");
   });
-  nextBtn.addEventListener("click", function() {
+  nextBtn.addEventListener("click", function () {
     carouselElement.trigger("next.owl.carousel");
   });
 });
 
 if (!$("body").hasClass("is-admin")) {
-  $(".procedures.slider").each(function() {
+  $(".procedures.slider").each(function () {
     let $procedSliderContainer = $(this);
     let $procedSlider = $(this).find(".owl-carousel");
 
-
     let vanillaContainer = $procedSliderContainer[0];
-    const slides = Array.prototype.slice.call(vanillaContainer.querySelectorAll('.owl-item'));
+    const slides = Array.prototype.slice.call(
+      vanillaContainer.querySelectorAll(".blog__tile")
+    );
 
-    
+    function notInitialize() {
+      console.log('Slides length', slides.length)
+      if (
+        window.matchMedia("(min-width: 1200px)").matches &&
+        slides.length <= 3
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
 
     $procedSlider.owlCarousel({
-      dots: true,
+      dots: notInitialize() ? false : true,
       margin: 0,
-      loop: true,
+      loop: notInitialize() ? false : true,
       dotsEach: 3,
       slideBy: 3,
       dotsContainer: $procedSliderContainer.find(
@@ -163,28 +175,37 @@ if (!$("body").hasClass("is-admin")) {
         0: {
           items: 1,
           slideBy: 1,
-          margin: 30
+          margin: 30,
         },
         1200: {
           items: 3,
-          slideBy: 3
-        }
-      }
+          slideBy: 3,
+        },
+      },
     });
     $procedSliderContainer
       .find('[s-control="procedures"] .prev')
-      .on("click", function() {
+      .on("click", function () {
         $procedSlider.trigger("prev.owl.carousel");
       });
     $procedSliderContainer
       .find('[s-control="procedures"] .next')
-      .on("click", function() {
+      .on("click", function () {
         $procedSlider.trigger("next.owl.carousel");
       });
+    
+    if (notInitialize()) {
+      $procedSliderContainer
+      .find('[s-control="procedures"] .prev').css('display', 'none');
+
+
+      $procedSliderContainer
+      .find('[s-control="procedures"] .next').css('display', 'none');
+    }
   });
 }
 
-$('.faq .d-none a[data-toggle="collapse"]').on("click", function() {
+$('.faq .d-none a[data-toggle="collapse"]').on("click", function () {
   if (
     $(this).attr("aria-expanded") === "true" ||
     !$dirGroup.find(".collapsing")
@@ -192,7 +213,7 @@ $('.faq .d-none a[data-toggle="collapse"]').on("click", function() {
     return false;
   }
 });
-$('.faq .d-lg-none a[data-toggle="collapse"]').on("click", function() {
+$('.faq .d-lg-none a[data-toggle="collapse"]').on("click", function () {
   if (
     $(this).attr("aria-expanded") === "true" ||
     !$dirGroup.find(".collapsing")
@@ -203,14 +224,14 @@ $('.faq .d-lg-none a[data-toggle="collapse"]').on("click", function() {
 
 //scrolling and sticky menu scripts
 
-$(".sticky-menu__item").on("click", function(e) {
+$(".sticky-menu__item").on("click", function (e) {
   e.preventDefault();
   let el = document.querySelector(e.target.attributes.href.value);
   let offset = $(e.target.attributes.href.value).offset().top;
   window.scroll({
     top: offset - 120,
     left: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
@@ -218,11 +239,11 @@ var section = document.querySelectorAll(".about-section");
 var sections = {};
 var i = 0;
 
-Array.prototype.forEach.call(section, function(e) {
+Array.prototype.forEach.call(section, function (e) {
   sections[e.id] = $(e).offset().top - 130;
 });
 
-window.onscroll = function() {
+window.onscroll = function () {
   var scrollPosition =
     document.documentElement.scrollTop || document.body.scrollTop;
 

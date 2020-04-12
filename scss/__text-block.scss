@@ -74,12 +74,17 @@
       line-height: 1.2;
       text-align: left;
       letter-spacing: 7px;
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
       @media(min-width: $xxl-width) {
         font-size: 71px;
       }
       @media(max-width: 1199px) {
         font-size: 31px;
-        margin-bottom: 36px;
+       
       }
     }
 
@@ -262,6 +267,9 @@
 
     div {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     &.title {
