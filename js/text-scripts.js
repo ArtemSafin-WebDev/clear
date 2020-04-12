@@ -150,7 +150,7 @@ if (!$("body").hasClass("is-admin")) {
     );
 
     function notInitialize() {
-      console.log('Slides length', slides.length)
+      console.log("Slides length", slides.length);
       if (
         window.matchMedia("(min-width: 1200px)").matches &&
         slides.length <= 3
@@ -160,7 +160,6 @@ if (!$("body").hasClass("is-admin")) {
         return false;
       }
     }
-
 
     $procedSlider.owlCarousel({
       dots: notInitialize() ? false : true,
@@ -193,14 +192,15 @@ if (!$("body").hasClass("is-admin")) {
       .on("click", function () {
         $procedSlider.trigger("next.owl.carousel");
       });
-    
+
     if (notInitialize()) {
       $procedSliderContainer
-      .find('[s-control="procedures"] .prev').css('display', 'none');
-
+        .find('[s-control="procedures"] .prev')
+        .css("display", "none");
 
       $procedSliderContainer
-      .find('[s-control="procedures"] .next').css('display', 'none');
+        .find('[s-control="procedures"] .next')
+        .css("display", "none");
     }
   });
 }
@@ -258,3 +258,28 @@ window.onscroll = function () {
     }
   }
 };
+
+var faqLinks = Array.prototype.slice.call(
+  document.querySelectorAll(".faq__link")
+);
+
+faqLinks.forEach(function (link) {
+  var container = link.closest(".faq");
+  console.log("FAQ link", link);
+  if (container) {
+    link.addEventListener("click", function (event) {
+      if (Element.prototype.scrollTo) {
+        var elementOffset =
+          container.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementOffset,
+          behavior: "smooth",
+        });
+      } else {
+        console.error('ScrollTo is not supported in your browser');
+      }
+    });
+  } else {
+    console.error("Parent not found");
+  }
+});
