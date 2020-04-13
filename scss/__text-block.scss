@@ -1,3 +1,55 @@
+
+
+.video-slide__content {
+  display: flex;
+  margin: -20px;
+
+  @media screen and (max-width: 968px) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.video-slide__left-col {
+  width: 65%;
+  padding: 20px;
+  @media screen and (max-width: 968px) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+.video-slide__video-container {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+
+  iframe,
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.video-slide__right-col {
+  width: 35%;
+  padding: 20px;
+  @media screen and (max-width: 968px) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .text-section {
   padding-top: 73px;
   padding-bottom: 62px;

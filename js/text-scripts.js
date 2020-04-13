@@ -49,6 +49,38 @@ $('[s-control="feedback"] .next').on("click", function () {
   $fbSlider.trigger("next.owl.carousel");
 });
 
+var videoBlocks = Array.prototype.slice.call(
+  document.querySelectorAll(".text-video")
+);
+
+videoBlocks.forEach(function (block) {
+  var $fbSlider = $(block.querySelector(".owl-carousel"));
+  $fbSlider.owlCarousel({
+    items: 1,
+    slideBy: 1,
+    dotsEach: 1,
+    dotsContainer: $(
+      block.querySelector('[s-control="feedback"] .slider__nav__container')
+    ),
+    autoHeight: true,
+    margin: 73,
+    loop: true,
+    dots: true,
+  });
+  $(block.querySelector('[s-control="feedback"] .prev')).on(
+    "click",
+    function () {
+      $fbSlider.trigger("prev.owl.carousel");
+    }
+  );
+  $(block.querySelector('[s-control="feedback"] .next')).on(
+    "click",
+    function () {
+      $fbSlider.trigger("next.owl.carousel");
+    }
+  );
+});
+
 var $partnerSlider = $(".partners-slider .owl-carousel");
 $partnerSlider.owlCarousel({
   dots: true,
@@ -276,7 +308,7 @@ faqLinks.forEach(function (link) {
           behavior: "smooth",
         });
       } else {
-        console.error('ScrollTo is not supported in your browser');
+        console.error("ScrollTo is not supported in your browser");
       }
     });
   } else {
