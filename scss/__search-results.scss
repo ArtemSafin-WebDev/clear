@@ -1,0 +1,128 @@
+.search-results {
+    padding: 50px 0;
+    @media screen and (max-width: 568px) {
+        padding: 30px 0;
+    }
+}
+
+
+.search-results__form-wrapper {
+    display: flex;
+    margin-bottom: 30px;
+    @media screen and (max-width: 568px) {
+        margin-bottom: 30px;
+    }
+}
+
+
+.search-results__heading {
+    font-family: "Helvetica Neue1";
+    font-size: 36px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: .07em;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: 568px) {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+}
+
+
+.search-results__count {
+    font-family: "Helvetica Neue1";
+    font-weight: 300;
+    font-size: 16px;
+
+    padding: 10px 0;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+}
+
+
+.search-results__list {
+    margin-top: 50px;
+    max-width: 700px;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 568px) {
+        margin-top: 30px;
+    }
+}
+
+
+.search-results__list-item {
+    margin-bottom: 50px;
+    padding: 0;
+
+    @media screen and (max-width: 568px) {
+        margin-bottom: 30px;
+    }
+    &::before {
+        display: none;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.search-results__card {
+    display: block;
+    &:link,
+    &:visited {
+        color: black;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+.search-results__card-title {
+    font-size: 18px;
+    font-family: "Helvetica Neue1";
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: .08em;
+
+    @media screen and (max-width: 568px) {
+        font-size: 16px;
+    }
+}
+
+
+.search-results__card-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    font-family: "Helvetica Neue1";
+    @media screen and (max-width: 568px) {
+        font-size: 14px;
+    }
+}
+
+
+.search-results__card-go {
+    color: #c7b2a6;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: "Helvetica Neue1";
+    letter-spacing: .1em;
+    display: inline-flex;
+    align-items: center;
+    
+    svg {
+        fill: currentColor;
+        width: 9px;
+        height: 9px;
+        margin-left: 3px;
+        flex-shrink: 0;
+    }
+}
