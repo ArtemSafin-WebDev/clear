@@ -7,6 +7,12 @@ body {
   }
 }
 
+
+
+.select2-dropdown ul li::before {
+  display: none;
+}
+
 .well {
   margin-bottom: 0px !important;
 }
