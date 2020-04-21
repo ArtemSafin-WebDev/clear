@@ -54,6 +54,7 @@ var videoBlocks = Array.prototype.slice.call(
 );
 
 videoBlocks.forEach(function (block) {
+  if (document.body.classList.contains('is-admin')) return;
   var $fbSlider = $(block.querySelector(".owl-carousel"));
   $fbSlider.owlCarousel({
     items: 1,
