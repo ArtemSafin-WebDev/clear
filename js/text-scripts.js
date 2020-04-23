@@ -11,7 +11,7 @@ $prepareSlider.owlCarousel({
     },
     1200: {
       items: 4,
-      slideBy: 4,
+      slideBy: 1,
       dotsEach: 4,
     },
   },
@@ -37,7 +37,7 @@ $fbSlider.owlCarousel({
     },
     1200: {
       items: 4,
-      slideBy: 4,
+      slideBy: 1,
       dotsEach: 4,
     },
   },
@@ -89,7 +89,7 @@ $partnerSlider.owlCarousel({
   items: 8,
   loop: true,
   dotsEach: 3,
-  slideBy: 3,
+  slideBy: 1,
   dotsContainer: $('[s-control="partners"] .slider__nav__container'),
   responsive: {
     0: {
@@ -116,7 +116,7 @@ $medicsSlider.owlCarousel({
   items: 4,
   // loop:true,
   dotsEach: 3,
-  slideBy: 3,
+  slideBy: 1,
   dotsContainer: $('[s-control="medics"] .slider__nav__container'),
   responsive: {
     0: {
@@ -149,7 +149,7 @@ eduSections.forEach(function (element) {
     items: 4,
     loop: false, // копирование слайдов
     dotsEach: 3,
-    slideBy: 3,
+    slideBy: 1,
     dotsContainer: $(
       element.querySelector('[s-control="edu"] .slider__nav__container')
     ),
@@ -199,7 +199,7 @@ if (!$("body").hasClass("is-admin")) {
       margin: 0,
       loop: notInitialize() ? false : true,
       dotsEach: 3,
-      slideBy: 3,
+      slideBy: 1,
       dotsContainer: $procedSliderContainer.find(
         '[s-control="procedures"] .slider__nav__container'
       ),
@@ -211,7 +211,7 @@ if (!$("body").hasClass("is-admin")) {
         },
         1200: {
           items: 3,
-          slideBy: 3,
+          slideBy: 1,
         },
       },
     });
