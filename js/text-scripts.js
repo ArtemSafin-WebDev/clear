@@ -1,60 +1,62 @@
-var $prepareSlider = $(".prepare-slider .owl-carousel");
-$prepareSlider.owlCarousel({
-  items: 4,
-  dotsContainer: $('[s-control="prepare"] .slider__nav__container'),
-  margin: 73,
-  responsive: {
-    0: {
-      items: 1,
-      slideBy: 1,
-      dotsEach: 1,
+if (!$("body").hasClass("is-admin")) {
+  var $prepareSlider = $(".prepare-slider .owl-carousel");
+  $prepareSlider.owlCarousel({
+    items: 4,
+    dotsContainer: $('[s-control="prepare"] .slider__nav__container'),
+    margin: 73,
+    responsive: {
+      0: {
+        items: 1,
+        slideBy: 1,
+        dotsEach: 1,
+      },
+      1200: {
+        items: 4,
+        slideBy: 1,
+        dotsEach: 4,
+      },
     },
-    1200: {
-      items: 4,
-      slideBy: 1,
-      dotsEach: 4,
-    },
-  },
-});
-$('[s-control="prepare"] .prev').on("click", function () {
-  $prepareSlider.trigger("prev.owl.carousel");
-});
-$('[s-control="prepare"] .next').on("click", function () {
-  $prepareSlider.trigger("next.owl.carousel");
-});
+  });
+  $('[s-control="prepare"] .prev').on("click", function () {
+    $prepareSlider.trigger("prev.owl.carousel");
+  });
+  $('[s-control="prepare"] .next').on("click", function () {
+    $prepareSlider.trigger("next.owl.carousel");
+  });
 
-var $fbSlider = $(".feedback-slider .owl-carousel");
-$fbSlider.owlCarousel({
-  items: 4,
-  dotsContainer: $('[s-control="feedback"] .slider__nav__container'),
-  autoHeight: true,
-  margin: 73,
-  responsive: {
-    0: {
-      items: 1,
-      slideBy: 1,
-      dotsEach: 1,
+  var $fbSlider = $(".feedback-slider .owl-carousel");
+  $fbSlider.owlCarousel({
+    items: 4,
+    dotsContainer: $('[s-control="feedback"] .slider__nav__container'),
+    autoHeight: true,
+    margin: 73,
+    responsive: {
+      0: {
+        items: 1,
+        slideBy: 1,
+        dotsEach: 1,
+      },
+      1200: {
+        items: 4,
+        slideBy: 1,
+        dotsEach: 4,
+      },
     },
-    1200: {
-      items: 4,
-      slideBy: 1,
-      dotsEach: 4,
-    },
-  },
-});
-$('[s-control="feedback"] .prev').on("click", function () {
-  $fbSlider.trigger("prev.owl.carousel");
-});
-$('[s-control="feedback"] .next').on("click", function () {
-  $fbSlider.trigger("next.owl.carousel");
-});
+  });
+  $('[s-control="feedback"] .prev').on("click", function () {
+    $fbSlider.trigger("prev.owl.carousel");
+  });
+  $('[s-control="feedback"] .next').on("click", function () {
+    $fbSlider.trigger("next.owl.carousel");
+  });
+}
 
 var videoBlocks = Array.prototype.slice.call(
   document.querySelectorAll(".text-video")
 );
 
 videoBlocks.forEach(function (block) {
-  if (document.body.classList.contains('is-admin')) return;
+  if (document.body.classList.contains("is-admin")) return;
   var $fbSlider = $(block.querySelector(".owl-carousel"));
   $fbSlider.owlCarousel({
     items: 1,
