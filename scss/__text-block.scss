@@ -191,7 +191,7 @@
   text-transform: uppercase;
   line-height: 1.2;
   letter-spacing: 3px;
-  margin-bottom: 3.2rem;
+  margin-bottom: 20px;
 
   &.big {
     font-size: 50px;
@@ -449,6 +449,22 @@
     padding: 28px 50px 30px 25px;
     overflow: hidden;
     margin-bottom: 25px;
+
+    a {
+      display: block;
+      flex-grow: 1;
+      &:hover {
+        text-decoration: none;
+  
+        &:before {
+          transform: translateX(-150%);
+        }
+  
+        .text {
+          color: white;
+        }
+      }
+    }
 
     &:before {
       content: '';
