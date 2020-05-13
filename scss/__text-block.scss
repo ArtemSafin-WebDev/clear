@@ -441,8 +441,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../assets/sale-sm.png");
-    background-size: cover;
+    background-image: url("../assets/sale-sm.png");
+    background-size: cover !important;
     position: relative;
     border: 1px solid $brown;
     height: 156px;
@@ -524,8 +524,8 @@
 
     &--big {
       display: block;
-      background: url("../assets/sale-big.png");
-      background-size: cover;
+      background-image: url("../assets/sale-big.png");
+      background-size: cover !important;
       padding-left: 52px;
       padding-top: 55px;
       padding-bottom: 44px;
